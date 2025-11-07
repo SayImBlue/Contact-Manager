@@ -16,37 +16,47 @@ This is part of my **6-month C++ mastery roadmap – Week 1 Mini Project**.
 - No external libraries
 
 ## 🗂️ Structure
+```
 ContactManager/
 ├── include/
-│ └── Contact.h
+│   └── Contact.h
 ├── src/
-│ ├── Contact.cpp
-│ └── main.cpp
+│   ├── Contact.cpp
+│   └── main.cpp
 ├── data/
-│ └── contacts.txt
-
+│   └── contacts.txt
+```
 
 ## 💻 Build
 Compile using g++:
 ```bash
-g++ src/*.cpp -Iinclude -o ContactManager
+g++ -std=c++17 -Wall -Wextra src/*.cpp -Iinclude -o ContactManager
 ./ContactManager
-🧠 Author
+```
+
+Alt build (if files are in repo root):
+```bash
+g++ -std=c++17 -Wall -Wextra ContactManager.cpp Contact.cpp -o ContactManager
+./ContactManager
+```
+
+## 🧠 Author
 Made by Al Farouk Benrami – Big Data & AI Future Engineer at Euromed Fès.
 
 ---
 
 ## 🧹 `.gitignore`
-
 ```gitignore
 # Compiled binaries
 *.exe
 *.out
 *.o
+ContactManager
 
 # OS junk
 .DS_Store
 Thumbs.db
 
-# Data
-/data/contacts.txt
+# Data (tracked elsewhere or regenerated)
+data/contacts.txt
+```
